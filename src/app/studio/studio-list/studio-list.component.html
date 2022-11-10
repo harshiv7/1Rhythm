@@ -1,0 +1,21 @@
+<!-- Studio  -->
+
+<div class="d-flex justify-content-between align-items-center">
+    <h4 class="mb-0 fw-semibold">Explore studios</h4>
+    <a href="" class="nav-link"><small class="text-primary fw-semibold">SEE ALL</small></a>
+</div>
+
+<div class="row mt-3">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let studio of studioList | slice:0:4; let i=index">
+        <div class="card border-0 shadow p-3">
+           <div class="shadow overflow-hidden rounded">
+            <img [src]="studio.imageSrc" alt="Studio 1" class="img-fluid">
+           </div>
+            <div class="card-body p-0 pt-3">
+                <h5 class="card-title">{{studio.name}}</h5>
+                <p class="card-text">{{studio.description}}</p>
+                <a href="#" class="btn btn-outline-info d-block">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
